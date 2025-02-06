@@ -1,0 +1,65 @@
+#Nav-ul li .nav-link {
+    color: aqua !important;
+    font-size: 20px;
+}
+
+#Nav-ul li .nav-link:hover {
+    color: black !important;
+    transition: color 0.3s ease; 
+    text-shadow: 2px 2px 4px rgba(0, 255, 255, 0.7); 
+}
+
+#Nav-ul li .nav-link.active-link {
+    font-weight:bold;
+    color: silver!important; 
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-color: grey;
+}@keyframes typing {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+#Home-H2 {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 3s steps(30) 1s forwards;
+}
+#Home-H1 {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 3s steps(30) 0.5s forwards;
+}
+#heroName {
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+#heroName:hover {
+    color: #00bcd4;
+    text-shadow: 2px 2px 5px rgba(0, 188, 212, 0.7);
+    transform: scale(1.1); 
+}
+#home{
+    display:flex;
+    border: solid blue 2px;
+}
+#Hero-Div{
+    width:100%;
+    border: solid 2px;
+}
+#Hero-img {
+    width: 400px;
+    height: 400px;
+    border: solid 2px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image fits the container without distortion */
+}
