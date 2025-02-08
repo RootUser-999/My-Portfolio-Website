@@ -50,16 +50,90 @@
 }
 #home{
     display:flex;
-    border: solid blue 2px;
+    height:92vh;
+    /* border: solid blue 2px; */
 }
 #Hero-Div{
-    width:100%;
-    border: solid 2px;
+    margin-left: 4.17vw;
+        width:100%;
 }
+
 #Hero-img {
+    margin-right: 300px;
+    margin-top: 200px;
     width: 400px;
     height: 400px;
-    border: solid 2px;
-    border-radius: 50%; /* Makes the image circular */
-    object-fit: cover; /* Ensures the image fits the container without distortion */
+    border: solid 2px aqua;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    align-self: flex-start;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+#Hero-img:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 0 20px 5px aqua; 
+}
+
+
+#Hero-img::after {
+    content: "Welcome to my portfolio!";
+    position: absolute;
+    bottom: 30px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 255, 255, 0.8); 
+    color: #000; 
+    padding: 10px 20px;
+    border-radius: 20px;
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+#Hero-img:hover::after {
+    opacity: 1;
+}
+#des-div {
+    border: solid 2px rgba(255, 255, 255, 0.5); /* Semi-transparent white border */
+    width: 50vw; /* Maintain 50% of the viewport width */
+    max-width: 600px; /* Max width to prevent it from growing too large */
+    margin-bottom: 200px;
+    padding: 20px;
+    color: white;
+    font-size: 1.1rem;
+    margin-left: 4.17vw; /* Space from the left */
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Slight dark background to make text stand out */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    word-wrap: break-word; /* Ensure text wraps inside the container */
+    position: relative; /* Keep it relative to its parent container */
+}
+
+/* Responsive adjustments for medium-sized screens */
+@media (max-width: 991px) {
+    #des-div {
+        width: 70vw; /* Reduce the width to 70% of the screen */
+        margin-left: 20px; /* Reduce the left margin for medium screens */
+        text-align: left; /* Align text to the left */
+    }
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 576px) {
+    #des-div {
+        width: 90vw; /* Set the width to 90% of the screen */
+        padding: 15px; /* Adjust padding for smaller screens */
+        margin-left: 10px; /* Further reduce the left margin on very small screens */
+        text-align: left; /* Align text to the left */
+    }
+}
+#education{
+    height:86vh;
+    margin-top: 50px;
 }
