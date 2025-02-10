@@ -1,3 +1,7 @@
+body{
+
+    background-color:#212529;
+}
 #Nav-ul li .nav-link {
     color: aqua !important;
     font-size: 20px;
@@ -84,8 +88,8 @@
     bottom: 30px; 
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(0, 255, 255, 0.8); 
-    color: #000; 
+    background-color: rgba(27, 27, 27, 0.8); 
+    color: white; 
     padding: 10px 20px;
     border-radius: 20px;
     opacity: 0; 
@@ -148,42 +152,152 @@
     height:600px; 
 
 }
-#services{
-    height:86vh;
+#services {
+    height: 86vh;
     margin-top: 50px;
 }
-#ser-elements{
+
+#ser-elements {
     height: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 #service-frontend .card,
 #service-backend .card,
 #service-ux .card,
+#service-cybersecurity .card,
+#edu-divL .card,
+#edu-divL2 .card,
+#edu-divR .card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+/* Delay animations for each card for a sequential effect */
+#service-frontend .card {
+    animation-delay: 0.2s;
+}
+
+#service-backend .card {
+    animation-delay: 0.4s;
+}
+
+#service-ux .card {
+    animation-delay: 0.6s;
+}
+
 #service-cybersecurity .card {
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    animation-delay: 0.8s;
+}
+
+#edu-divL .card {
+    animation-delay: 1s;
+}
+
+#edu-divL2 .card {
+    animation-delay: 1.2s;
+}
+
+#edu-divR .card {
+    animation-delay: 1.4s;
+}
+
+/* Animation for Blink Effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 #service-frontend:hover .card,
 #service-backend:hover .card,
 #service-ux:hover .card,
 #service-cybersecurity:hover .card {
-  transform: scale(1.05); 
-  box-shadow: 0 8px 20px rgba(0, 255, 255, 0.5); 
-  border-color: rgba(0, 255, 255, 0.7); 
-}
-/* Hover Animation for Education Section Cards */
-#edu-divL .card,
-#edu-divL2 .card,
-#edu-divR .card {
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transform: scale(1.15); 
+    box-shadow: 0 8px 30px rgba(0, 255, 255, 0.6); 
+    border-color: rgba(0, 255, 255, 0.8); 
 }
 
 #edu-divL:hover .card,
 #edu-divL2:hover .card,
 #edu-divR:hover .card {
-  transform: scale(1.05); /* Slightly scale up the card */
-  box-shadow: 0 8px 20px rgba(0, 255, 255, 0.5); /* Glowing effect */
-  border-color: rgba(0, 255, 255, 0.7); /* Cyan border on hover */
+    transform: scale(1.15);
+    box-shadow: 0 8px 30px rgba(0, 255, 255, 0.6);
+    border-color: rgba(0, 255, 255, 0.8);
 }
+
+#contact-f1{
+    height: 87vh;
+    margin-top: 50px;
+    background-color: #212529;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#form {
+    height: 500px;
+    width: 500px;
+    border: solid 2pxrgb(107, 72, 72);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(26, 26, 26);
+    box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  #form input, #form textarea {
+    color: #e0e0e0;
+    width: 80%;
+    height: 50px;
+    margin: 10px;
+    border-radius: 10px;
+    border: solid 2px #3a3a3a;
+    padding: 10px;
+    font-size: 1.1rem;
+    background-color: #1e1e1e;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  #form input:focus, #form textarea:focus {
+    border-color: #4e9af1;
+    box-shadow: 0 0 5px #4e9af1;
+    background-color:rgb(44, 44, 44);
+  }
+  
+  #form button {
+    width: 25%;
+    height: 50px;
+    margin: 10px 0 0px 10px;
+    border-radius: 10px;
+    border: solid 2px  #4e9af1;
+    padding: 10px;
+    font-size: 1.1rem;
+    background-color: #3a3a3a;
+    color:rgb(145, 143, 143);
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  }
+  
+  #form button:hover {
+    background-color: #4e9af1;
+    color: #121212;
+    border-color: #4e9af1;
+    box-shadow: 0 0 15px rgba(78, 154, 241, 0.7);
+  }
+  

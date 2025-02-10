@@ -6,6 +6,7 @@ import Hero from './components/Hero';
 import Education from './components/Education';
 import Services from './components/Services';
 import Footer from './components/Footer';
+import Contact from "./components/Contact";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -16,6 +17,8 @@ function App() {
                 <Route path="/" element={<Hero />} />
                 <Route path="/education" element={<Education />} />
                 <Route path="/services" element={<Services />} />
+                <Route path="/contact" element={<Contact />} />
+
             </Routes>
             <Footer />
         </Router>

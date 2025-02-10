@@ -11,7 +11,7 @@ const Services = () => {
           animate={{ opacity: 1, y: 0 }}  
           transition={{ duration: 0.6 }}   
         >
-    <section id="services" className="py-5 bg-black text-white mt-5">
+    <section id="services" className="py-5  text-white mt-5">
       <div id='ser-elements' className="container">
         <h1 className="text-center text-info mb-5">Services</h1>
         
